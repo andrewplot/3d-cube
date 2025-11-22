@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotating Cube</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>3D Rotating Cube</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    
+    <div class="controls">
+        <div class="control-group">
+            <h3>Rotation</h3>
+            <div class="control">
+                <label>X-Axis (a):</label>
+                <input type="range" id="rotX" min="-3.14" max="3.14" step="0.01" value="0.73">
+                <span class="value" id="rotXVal">0.73</span>
+            </div>
+            <div class="control">
+                <label>Y-Axis (b):</label>
+                <input type="range" id="rotY" min="-3.14" max="3.14" step="0.01" value="1.2">
+                <span class="value" id="rotYVal">1.2</span>
+            </div>
+            <div class="control">
+                <label>Z-Axis (c):</label>
+                <input type="range" id="rotZ" min="-3.14" max="3.14" step="0.01" value="0.92">
+                <span class="value" id="rotZVal">0.92</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <h3>Translation</h3>
+            <div class="control">
+                <label>X Position:</label>
+                <input type="range" id="transX" min="-10" max="10" step="0.1" value="1.45">
+                <span class="value" id="transXVal">1.45</span>
+            </div>
+            <div class="control">
+                <label>Y Position:</label>
+                <input type="range" id="transY" min="-10" max="10" step="0.1" value="1.8">
+                <span class="value" id="transYVal">1.8</span>
+            </div>
+            <div class="control">
+                <label>Z Position:</label>
+                <input type="range" id="transZ" min="-10" max="10" step="0.1" value="1.4">
+                <span class="value" id="transZVal">1.4</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <h3>View</h3>
+            <div class="control">
+                <label>Scale (s):</label>
+                <input type="range" id="scale" min="0.5" max="5" step="0.1" value="1.6">
+                <span class="value" id="scaleVal">1.6</span>
+            </div>
+            <div class="control">
+                <label>Perspective:</label>
+                <input type="range" id="persp" min="1" max="10" step="0.1" value="5">
+                <span class="value" id="perspVal">5</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button onclick="resetView()">Reset View</button>
+        <button onclick="toggleRotation()">Auto-Rotate</button>
+    </div>
+    
+    <div class="instructions">
+        <strong>Controls:</strong> Drag on the canvas to rotate | Use sliders for precise control | Click "Auto-Rotate" for animation
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
